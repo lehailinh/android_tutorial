@@ -7,12 +7,12 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <EditText
+    <TextView
         android:id="@+id/url_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#8BC34A"
-        android:text="@string/url_link"
+        android:text="Main Activity"
         android:textSize="24dp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,6 +24,15 @@
         android:text="Start git test"
         android:textSize="34dp"
         android:textStyle="bold"
-        android:onClick="Webopen"/>
+        android:onClick="openGetTestActivity"/>
+
+    <Button
+        android:id="@+id/button_send_broadcast2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send broadcast Main"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:onClick="sendTestBroadcastMain"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

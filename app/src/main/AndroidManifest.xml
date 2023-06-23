@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package = "com.example.androidtutorial">
+    package="com.example.androidtutorial">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <permission android:name="com.example.androidtutorial.broadcast_permission"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission android:name="com.example.androidtutorial.broadcast_permission" />
 
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
+
             <category android:name="android.intent.category.BROWSABLE" />
+
             <data android:scheme="https" />
         </intent>
     </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,20 +27,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTutorial"
         tools:targetApi="31">
-    <activity
+
+<!--        <resceiver-->
+<!--            android:name=".MyReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="ACTION_1"/>-->
+<!--            </intent-filter>-->
+
+<!--        </resceiver>-->
+
+        <activity
             android:name=".Gittest"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
-    </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-    <activity
-        android:name=".MainActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>
