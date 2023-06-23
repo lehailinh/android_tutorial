@@ -12,6 +12,7 @@ import android.widget.EditText;
 public class Gittest extends AppCompatActivity {
     private EditText mOpenLink;
     private static final String TAG = "Gitttest";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +20,14 @@ public class Gittest extends AppCompatActivity {
         mOpenLink = findViewById(R.id.url_link);
     }
 
-    public void Webopen(View view) {
-    String urlLink = mOpenLink.getText().toString();
-    Uri webpage = Uri.parse(urlLink);
-    Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-    if(intent.resolveActivity(getPackageManager()) !=null){
-        startActivity(intent);
-    }else{
-        Log.d(TAG, "Open webpage fail!");
-    }
+    public void webOpen(View view) {
+        String urlLink = mOpenLink.getText().toString();
+        Uri webpage = Uri.parse(urlLink);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d(TAG, "Open webpage fail!");
+        }
     }
 }

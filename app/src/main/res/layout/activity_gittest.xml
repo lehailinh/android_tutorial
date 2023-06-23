@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".Gittest">
+
     <EditText
         android:id="@+id/url_link"
         android:layout_width="match_parent"
@@ -15,8 +16,14 @@
         android:text="@string/url_link"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="I am a textview" />
+
     <Button
         android:id="@+id/open_website"
         android:layout_width="wrap_content"
@@ -24,6 +31,6 @@
         android:text="@string/open_website"
         android:textSize="34sp"
         android:textStyle="bold"
-        android:onClick="Webopen"/>
+        android:onClick="webOpen"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

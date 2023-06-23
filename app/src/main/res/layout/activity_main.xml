@@ -16,12 +16,14 @@
         android:textSize="24dp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/open_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/open_website"
+        android:text="Start git test"
         android:textSize="34dp"
         android:textStyle="bold"
         android:onClick="Webopen"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

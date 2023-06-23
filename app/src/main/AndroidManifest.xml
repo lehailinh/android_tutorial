@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package = "com.example.androidtutorial">
+
     <uses-permission android:name="android.permission.INTERNET"/>
+    <permission android:name="com.example.androidtutorial.broadcast_permission"/>
+
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -24,6 +27,8 @@
             android:name=".Gittest"
             android:exported="true">
     </activity>
+
+
     <activity
         android:name=".MainActivity"
         android:exported="true">
